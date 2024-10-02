@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Project 2</h1>
+      <p>Creating and Updating Aadhaar Card, PAN Card, Driving License <br><strong>Based on Python GUI</strong></p>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#description">Description</a></li>
+          <li><a href="#about-project">About Project</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <a href="portfolio.html">Go back</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="description">
+    <div class="description-section">
+      <h2>Description</h2>
+      <p>
+        The code is a Python application that uses the tkinter library to create a graphical user interface (GUI) for managing and generating government-related documents, including Aadhaar cards, PAN cards, and driving licenses. It also incorporates SQLite for database management and PIL for image handling.
+      </p>
+      <h3>Imports:</h3>
+      <ul>
+        <li><strong>tkinter as tk:</strong> Provides the standard Python interface for creating GUIs.</li>
+        <li><strong>messagebox:</strong> Provides a way to show pop-up messages to the user.</li>
+        <li><strong>sqlite3:</strong> Allows interaction with SQLite databases.</li>
+        <li><strong>random:</strong> Used to generate random numbers and characters.</li>
+        <li><strong>string:</strong> Provides constants for various string operations.</li>
+        <li><strong>uuid:</strong> Used to generate unique identifiers.</li>
+        <li><strong>PIL.Image, ImageTk:</strong> For opening, manipulating, and displaying images.</li>
+        <li><strong>DateEntry:</strong> From the tkcalendar library, provides a date picker widget.</li>
+        <li><strong>subprocess:</strong> Allows running external programs.</li>
+        <li><strong>re:</strong> Provides regular expression operations.</li>
+        <li><strong>datetime:</strong> For handling date and time.</li>
+      </ul>
+      <h3>Initialization:</h3>
+      <ul>
+        <li><strong>Database Connection:</strong> Establishes a connection to an SQLite database named government_database.db. If the connection fails, it shows an error message.</li>
+        <li><strong>Database Tables:</strong> Creates tables in the database if they don't exist:
+          <ul>
+            <li><strong>Aadhaar:</strong> Stores Aadhaar card details.</li>
+            <li><strong>pan_card:</strong> Stores PAN card application details.</li>
+            <li><strong>driving_license:</strong> Stores driving license details.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Main Window Setup:</h3>
+      <ul>
+        <li><strong>Window Creation:</strong> Initializes the main window with a light gray background and sets it to a maximized state.</li>
+        <li><strong>Functions:</strong>
+          <ul>
+            <li><strong>get_current_datetime():</strong> Returns the current date and time as a string.</li>
+            <li><strong>generate_aadhaar_number():</strong> Generates a random 12-digit Aadhaar number.</li>
+            <li><strong>show_aadhaar_details():</strong> Opens a new window to enter and save Aadhaar details.</li>
+            <li><strong>generate_pan_number():</strong> Generates a random PAN card number.</li>
+            <li><strong>apply_for_pan_card():</strong> Opens a new window to enter and save PAN card application details.</li>
+            <li><strong>generate_license_number():</strong> Generates a unique driving license number using UUID.</li>
+            <li><strong>apply_for_driving_license():</strong> Opens a new window to enter and save driving license application details.</li>
+            <li><strong>sample_aadhaar():</strong> Opens a new window to display a sample Aadhaar card image.</li>
+            <li><strong>sample_pan_card():</strong> Opens a new window to display a sample PAN card image.</li>
+            <li><strong>sample_dl():</strong> Opens a new window to display a sample driving license image.</li>
+            <li><strong>main():</strong> Closes the current window and opens the login script (login.py).</li>
+            <li><strong>view_request():</strong> Closes the current window and opens the script to view all requests (All requests.py).</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Main Window Layout:</h3>
+      <ul>
+        <li><strong>Background Image:</strong> Sets a background image for the main window.</li>
+        <li><strong>Buttons:</strong>
+          <ul>
+            <li><strong>New Aadhaar:</strong> Opens a window to enter Aadhaar details.</li>
+            <li><strong>Apply for Pan Card:</strong> Opens a window to apply for a PAN card.</li>
+            <li><strong>Apply for Driving License:</strong> Opens a window to apply for a driving license.</li>
+            <li><strong>Sample Aadhaar:</strong> Opens a window displaying a sample Aadhaar card image.</li>
+            <li><strong>Sample Pan Card:</strong> Opens a window displaying a sample PAN card image.</li>
+            <li><strong>Sample Driving License:</strong> Opens a window displaying a sample driving license image.</li>
+            <li><strong>Back to Main Menu:</strong> Closes the current window and opens the main menu (login script).</li>
+            <li><strong>View Request:</strong> Closes the current window and opens the script to view all requests.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Additional Features:</h3>
+      <ul>
+        <li><strong>Error Handling:</strong> Handles errors related to database operations and user input validation, displaying appropriate error messages.</li>
+        <li><strong>Image Handling:</strong> Uses PIL to open, resize, and display images in new windows.</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="about-project">
+    <div class="about-project-section">
+      <h2>About Project</h2>
+      <p>Creating and updating Aadhaar Card, PAN Card, Driving License <br> <strong>Based on Python GUI</strong></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="1" required></textarea><br>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event){
+      event.preventDefault();
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      
+      alert("Message sent!");
+    });  
+  </script>
+</body>
+</html>
+

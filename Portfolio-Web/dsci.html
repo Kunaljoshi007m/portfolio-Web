@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Project</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Data Science Project</h1>
+      <p>Worked on a data science project using various datasets.</p>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#description">Description</a></li>
+          <li><a href="#about-project">About Project</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="portfolio.html">Go back</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="description">
+    <div class="description-section">
+      <h2>Description</h2>
+      <p><strong>Data Science Project</strong></p>
+      <p><strong>Overview:</strong><br>
+      This Data Science project focuses on leveraging various data analysis techniques and machine learning algorithms to extract valuable insights and make data-driven decisions. The project involves collecting, cleaning, analyzing, and visualizing data to uncover patterns, trends, and actionable information.</p>
+      
+      <p><strong>Imports and Libraries Used:</strong></p>
+      <ul>
+        <li><strong>Pandas:</strong> Provides data structures and data analysis tools for handling and manipulating large datasets.</li>
+        <li><strong>NumPy:</strong> Supports numerical operations and array handling, crucial for data manipulation.</li>
+        <li><strong>Matplotlib:</strong> Offers plotting capabilities to create static, animated, and interactive visualizations.</li>
+        <li><strong>Seaborn:</strong> Builds on Matplotlib to provide a high-level interface for drawing attractive statistical graphics.</li>
+        <li><strong>Scikit-learn:</strong> Implements machine learning algorithms and tools for model training, evaluation, and predictions.</li>
+        <li><strong>Jupyter Notebook:</strong> An interactive environment for writing and running code, and visualizing results.</li>
+      </ul>
+      
+      <p><strong>Data Collection:</strong><br>
+      <strong>Data Sources:</strong> Collected data from various sources, such as APIs, CSV files, or databases. Sources may include public datasets, web scraping, or survey data.<br>
+      <strong>Data Acquisition:</strong> Utilized libraries like requests for API interactions, BeautifulSoup for web scraping, or pandas for loading CSV files.</p>
+      
+      <p><strong>Data Preparation:</strong><br>
+      <strong>Data Cleaning:</strong> Handled missing values, removed duplicates, and addressed inconsistencies in the dataset.<br>
+      <strong>Data Transformation:</strong> Performed feature engineering, normalized data, and converted categorical variables into numerical formats.</p>
+      
+      <p><strong>Data Analysis:</strong><br>
+      <strong>Exploratory Data Analysis (EDA):</strong> Conducted EDA to understand the dataset's characteristics, including statistical summaries, distributions, and correlations.<br>
+      <strong>Visualization:</strong> Created various plots and charts to visualize data distributions, trends, and relationships between variables.</p>
+      
+      <p><strong>Modeling:</strong><br>
+      <strong>Algorithm Selection:</strong> Chose appropriate machine learning algorithms based on the problem type (e.g., regression, classification, clustering).<br>
+      <strong>Model Training:</strong> Split data into training and testing sets, trained models using algorithms like Linear Regression, Decision Trees, or k-Means Clustering.<br>
+      <strong>Model Evaluation:</strong> Evaluated model performance using metrics such as accuracy, precision, recall, F1-score, or Mean Absolute Error (MAE).</p>
+      
+      <p><strong>Insights and Results:</strong><br>
+      <strong>Key Findings:</strong> Summarized significant findings from the data analysis and model results.<br>
+      <strong>Business Impact:</strong> Highlighted how the insights can drive business decisions or solve specific problems.</p>
+      
+      <p><strong>Additional Features:</strong><br>
+      <strong>Interactive Dashboards:</strong> Used libraries like Dash or Streamlit to create interactive visualizations and dashboards for real-time data exploration.<br>
+      <strong>Automated Reports:</strong> Implemented scripts to generate automated reports with visualizations and summaries.</p>
+      
+      <p><strong>Example Use Cases:</strong></p>
+      <ul>
+        <li><strong>Customer Segmentation:</strong> Analyzed customer data to segment them into distinct groups for targeted marketing.</li>
+        <li><strong>Predictive Modeling:</strong> Built models to predict future sales, customer churn, or other key metrics.</li>
+        <li><strong>Anomaly Detection:</strong> Identified unusual patterns or outliers in data for fraud detection or quality control.</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="about-project">
+    <div class="about-project-section">
+      <h2>About Project</h2>
+      <p>Worked on a data science project using Hindi Shadh with 100% accuracy.<br><strong>Also Worked on various Datasets e.g.</strong><br>Heart Disease, Prediction Dataset, and More...</p>
+      <a href="https://github.com/Kunaljoshi007m/Multi_Class_Logistic_Regression_for_Classifying_Hindi_Handwritten_Shabd/blob/main/kunal_joshi_Multi_Class_Logistic_Regression_for_Classifying_Hindi_Handwritten_Shabd_.ipynb">Click Here for code</a>
+    </div>
+  </section>
+  
+  <section id="code">
+    <div class="code-section">
+      <h2>Code</h2>
+      <p><strong>Working to provide as many codes on GitHub</strong></p>
+      <a href="https://github.com/Kunaljoshi007m?tab=repositories">Click Here for Available code</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event){
+      event.preventDefault();
+      alert("Message sent!");
+    });  
+  </script>
+
+</body>
+</html>

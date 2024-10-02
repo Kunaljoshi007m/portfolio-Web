@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Project 1</h1>
+      <p>Creating And Updating Aadhaar card, PAN card, Driving license</p>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#description">Description</a></li>
+          <li><a href="#about-project">About Project</a></li>
+          <li><a href="#Code">Code</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <a href="portfolio.html">Go back</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="description">
+    <div class="description-section">
+      <h2>Description</h2>
+      <p><strong>CLI Code Overview</strong><br>
+      The CLI portion of the code focuses on generating and managing government-related documents such as Aadhaar cards, PAN cards, and driving licenses. It uses SQLite for database management and handles input and output through the command line.</p>
+      
+      <p><strong>Initialization</strong><br>
+      <strong>Database Connection:</strong> Establishes a connection to an SQLite database named <code>government_database.db</code>. Creates tables if they don't exist:
+      <ul>
+        <li><code>Aadhaar</code>: Stores Aadhaar card details.</li>
+        <li><code>pan_card</code>: Stores PAN card application details.</li>
+        <li><code>driving_license</code>: Stores driving license details.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Functions</strong><br>
+      <strong>generate_aadhaar_number():</strong> Generates a random 12-digit Aadhaar number. Returns this number to be used in the Aadhaar details entry.<br>
+      <strong>generate_pan_number():</strong> Generates a random PAN card number. The format is four random uppercase letters, followed by four random digits, and ending with one random uppercase letter.<br>
+      <strong>generate_license_number():</strong> Generates a unique driving license number using a UUID and truncating it to 12 characters.<br>
+      <strong>show_aadhaar_details():</strong> Collects user input for Aadhaar card details:
+      <ul>
+        <li>Name</li>
+        <li>Phone number</li>
+        <li>Date of Birth (DOB)</li>
+        <li>Address</li>
+        <li>Gender</li>
+      </ul>
+      Validates the input (ensures all fields are filled and name format is correct). Inserts the details into the Aadhaar table in the database. Displays the Aadhaar number to the user.<br>
+      <strong>apply_for_pan_card():</strong> Collects user input for PAN card application:
+      <ul>
+        <li>Name</li>
+        <li>Phone number</li>
+        <li>Date of Birth (DOB)</li>
+        <li>Address</li>
+        <li>Gender</li>
+      </ul>
+      Validates the input (ensures all fields are filled and name format is correct). Generates a PAN number and inserts the details into the Pan Card table in the database. Displays the PAN number to the user.<br>
+      <strong>apply_for_driving_license():</strong> Collects user input for driving license application:
+      <ul>
+        <li>Name</li>
+        <li>Date of Birth (DOB)</li>
+        <li>Address</li>
+        <li>Phone number</li>
+        <li>Gender</li>
+      </ul>
+      Validates the input (ensures all fields are filled and name format is correct). Generates a driving license number and inserts the details into the Driving License table in the database. Displays the driving license number to the user.</p>
+      
+      <p><strong>Database Management</strong><br>
+      <strong>Tables:</strong>
+      <ul>
+        <li><code>Aadhaar</code>: Columns for name, phone_number, dob, address, gender, aadhaar_number.</li>
+        <li><code>pan_card</code>: Columns for name, phone_number, dob, address, gender, pan_card_number.</li>
+        <li><code>driving_license</code>: Columns for name, phone_number, dob, address, gender, license_number.</li>
+      </ul>
+      <strong>Database Operations:</strong>
+      <ul>
+        <li>Creates tables if they don't already exist.</li>
+        <li>Inserts records into respective tables based on user input.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Error Handling</strong><br>
+      Handles errors related to database operations and user input: Displays appropriate error messages if input validation fails or if there are issues with database operations.</p>
+      
+      <p><strong>Additional Notes</strong><br>
+      <strong>CLI Output:</strong> Outputs information directly to the command line, including success messages and generated numbers.<br>
+      <strong>No GUI:</strong> All interactions are done through command-line prompts rather than graphical interfaces.</p>
+    </div>
+  </section>
+  
+  <section id="about-project">
+    <div class="about-project-section">
+      <h2>About Project</h2>
+      <p>Creating and updating Aadhaar card, PAN card, Driving license</p>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="1" required></textarea><br>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event){
+      event.preventDefault();
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      
+      alert("Message sent!");
+    });  
+  </script>
+
+</body>
+</html>
